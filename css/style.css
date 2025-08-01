@@ -17,7 +17,8 @@
     color: black;
     font-family: "inter",sans-serif;
 }
- header.logo_and_nav{ 
+
+ header.logo_and_nav{     
     font-size: 16px;
     position: sticky;
     top: 0;
@@ -26,6 +27,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     background-color: #FFFFFF;
+    background-size: 100%;
     padding: 10px 0px;
     justify-content: space-around;
     text-transform: capitalize;
@@ -35,7 +37,7 @@
 }
 
 header.logo_and_nav div.logo{
-    padding-left: 30px;
+    
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -54,7 +56,7 @@ header.logo_and_nav div.logo>a>img{
 }
 header.logo_and_nav nav.pages{
     justify-content: space-around;
-    padding-right: 20px;
+    padding-right: 0px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -68,16 +70,17 @@ header.logo_and_nav nav.pages{
     max-height: max-content;
 }
 header.logo_and_nav nav.pages ul.mainpages>li{
-    padding: 10px 20px;
+    padding: 10px 17px;
     border-radius: 10px;
     position: relative;
+    cursor: pointer;
 }
 header.logo_and_nav nav.pages ul.mainpages>li>a{
     font-weight: 450;
 }
 header.logo_and_nav nav.pages ul.mainpages>li>a>i{
     font-size: 12px;
-    padding-left: 2px;
+    
 }
 header.logo_and_nav nav.pages ul.mainpages>li.Home>ul>li{
     border: 2px;
@@ -117,6 +120,8 @@ header.logo_and_nav nav.pages ul.mainpages li.Home ul.homemenu li a span{
  header.logo_and_nav nav.pages ul.mainpages li.Home ul.homemenu li {
     padding:10px 20px;
     position: relative;
+    cursor: pointer;
+    border-radius: 7px;
 } 
  header.logo_and_nav nav.pages ul.mainpages li.Home ul.homemenu li a{
     display: flex;
@@ -157,7 +162,6 @@ header.logo_and_nav nav.pages ul.mainpages li.listings {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    padding: 10px ;
     border: 2px;
     border-radius: 10px;
     position: relative;
@@ -234,6 +238,8 @@ header.logo_and_nav nav.pages ul.mainpages li.Account ul.homemenu li a{
 }
 header.logo_and_nav nav.pages ul.mainpages li.Account ul.homemenu li {
     padding:10px 20px;
+    cursor: pointer;
+    border-radius: 7px;
 }
 header.logo_and_nav nav.pages ul.mainpages li.Account:hover ul.homemenu{
     visibility:visible;
@@ -254,6 +260,10 @@ header.logo_and_nav nav.pages ul.mainpages li.Account ul.homemenu li.auth div a{
     justify-content: space-between;
     
 }
+header.logo_and_nav nav.pages ul.mainpages li.Account ul.homemenu li.auth div a p{
+    margin-left: 10px;
+}
+
 header.logo_and_nav nav.pages ul.mainpages li.Account ul.homemenu li.auth{
     display: flex;
     flex-direction: column;
@@ -321,6 +331,15 @@ header.logo_and_nav nav.pages ul.mainpages li.pagess ul.homemenu li.about a{
 }
 header.logo_and_nav nav.pages ul.mainpages li.pagess ul.homemenu li.about {
     padding:10px 20px;
+    cursor: pointer;
+    border-radius: 7px;
+    
+}
+header.logo_and_nav nav.pages ul.mainpages li.pagess ul.homemenu li.terms {
+    padding:10px 20px;
+    margin-right:10px ;
+    cursor: pointer;
+    border-radius: 7px;
 }
 header.logo_and_nav nav.pages ul.mainpages li.pagess:hover ul.homemenu{
     visibility:visible;
@@ -329,6 +348,9 @@ header.logo_and_nav nav.pages ul.mainpages li.pagess:hover ul.homemenu{
   
 }
 header.logo_and_nav nav.pages ul.mainpages>li.pagess>ul.homemenu>li.about:hover{
+    background-color: #F5F7FA;
+}
+header.logo_and_nav nav.pages ul.mainpages>li.pagess>ul.homemenu>li.terms:hover{
     background-color: #F5F7FA;
 }
 
@@ -370,6 +392,12 @@ header.logo_and_nav nav.pages ul.mainpages li.pagess ul.homemenu li.about:hover 
     opacity: 1;
 
 }
+header.logo_and_nav nav.pages ul.mainpages li.pagess ul.homemenu li.about:hover ul li{
+    padding:10px 20px;
+    cursor: pointer;
+    border-radius: 7px;
+
+}
 header.logo_and_nav nav.pages ul.mainpages>li.pagess>ul.homemenu li.about ul>li:hover{
     background-color: #F5F7FA;
 }
@@ -381,24 +409,32 @@ header.logo_and_nav div.icons{
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding-right: 35px;
+    margin-right: 30px;
+
 }
-header.logo_and_nav div.icons i.fa-sun{
-    padding: 10px;
+header.logo_and_nav div.icons>a{
+display: flex;
+justify-content: end;
+
+}
+header.logo_and_nav div.icons a.sun{
+    padding: 7px;
     font-size: 20px;
+    margin-left: auto;
 }
 header.logo_and_nav div.icons a.user{
     padding: 10px;
     padding-right: 20px;
+    margin-right: 0px;
+
 }
 
+ header.logo_and_nav div.icons a.small{ 
+    display: none;
+ }
  header.logo_and_nav div.icons a.join{ 
     background-color: #D85151;
-    
     transition: background-color 0.5s;
-    
-    align-content: center;
-    align-items: center;
     padding: 10px 15px;
     color: white;
     border: 2px;
@@ -410,12 +446,22 @@ header.logo_and_nav div.icons a.join:hover{
 }    
  
 
+.section2,.section3,.section4,.section6,.section8,.section9{
+    max-width: 1328px;
+}
+footer>*{
+    max-width: 1328px;
+}
 
+.section5>*{
+    max-width: 1328px;
+}
 main section.section1 {
     background-image: url(../imgs/header\ full\ hero.png);
     background-size:142.5%;
     background-repeat: no-repeat;
-    background-position: center ;
+    background-size: 2160px;
+    background-position: center center;
     height: 683px;
     background-color: #3D7A81;
     align-content: center;
@@ -547,14 +593,20 @@ main .section1 ul li a:hover p{
 
 
 
+
 .section2{
 
     display: flex;
     flex-direction: column;
     background-color: #FFFFFF;
-    width: 87%;
-    margin: 0px auto;
+     
     
+    width: 100%;
+    justify-content: space-around;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0px clamp(30px, 5vw, 30px) 0 clamp(10px, 10vw, 50px); 
+
     
 }
 
@@ -564,6 +616,10 @@ main .section1 ul li a:hover p{
     flex-direction: row;
     font-weight: 500;
     justify-content: space-between;
+   
+
+    align-items: center;
+
     
 }
 .section2 header h1{
@@ -587,12 +643,11 @@ section.section2 div.elements{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-
-    
-    
+    justify-content: space-around;   
 }
 section.section2 div.elements a{
     display: flex;
+    width: max-content;
 
     width: 25%;
     padding: 15px 0px;
@@ -604,7 +659,7 @@ section.section2 div.elements a:hover>i{
     transform: scale(1.2);
 }
 section.section2 div.elements a>i{
-    padding: 17px ;
+    padding: 20px ;
     background-color: #E0E6EC;
     border-radius: 50%;
     transition: transform 0.4s ease;
@@ -615,50 +670,20 @@ section.section2 div.elements a p{
     align-content: center;
   
 }
-@media screen and (max-width: 600px) {
-    section.section2 div.elements{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-
-    }section.section2 div.elements a{
-    display: flex;
-    width: 33.333%;
-    padding: 10px 0px;
-    
-    }
-}
-@media screen and (max-width: 450px) {
-    section.section2 div.elements{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-
-    }section.section2 div.elements a{
-    display: flex;
-
-    width: 50%;
-    padding: 10px 0px;
-    
-    }
-}
-
-@media screen and (max-width: 300px) {
-    section.section2 div.elements{
-        display: flex;
-        flex-direction: column;
-        width:auto;
-    }
-}
 
 .section3{
+
     display: flex;
     flex-direction: row;
     background-color: #FFFFFF;
-    width: 87%;
-    margin: 0px auto;
     box-sizing: border-box;
     padding-top: 100px;
+    justify-content: space-around;
+    width: 100%;
+    
+    margin: 0 auto;
+    padding: 100px clamp(30px, 5vw, 100px) 0 clamp(0px, 5vw, 20px); 
+
     
 }
 .section3 div.local{
@@ -670,7 +695,7 @@ section.section2 div.elements a p{
     border: 2px;
     border-radius: 20px;
     cursor: pointer;
-    padding-right: 50px;
+    padding-right: 100px;
 }
 .section3 div.local header{ 
     display: flex;
@@ -709,7 +734,12 @@ section.section2 div.elements a p{
 .section3 div.local div.home img{
     width: 340px;
 }
-.section3 div.local header h2,p{
+.section3 div.local>header>h2{
+    margin: 0 auto;
+    width: 200px;
+   
+} 
+.section3 div.local>header>p{
     margin: 0 auto;
     width: 200px;
    
@@ -732,12 +762,18 @@ section.section2 div.elements a p{
 
 .section3 div.near{
     flex:2;
-    margin-left: 100px;
+
     position: relative;
+
+    margin-left: clamp(10px, 5vw, 100px);
+
+
 }
 .section3 div.near header{
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
     justify-content: space-between;
     
 }
@@ -754,7 +790,7 @@ section.section2 div.elements a p{
 
 }
 .section3 div.near header h1{
-    font-size: 35px;
+    font-size: 30px;
     font-weight: 600;
    
 }
@@ -763,38 +799,62 @@ section.section2 div.elements a p{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+
+    justify-content: space-around;
 }
 .section3 div.near div.elements>a{
     display: flex;
     flex-direction: row;
-    width: 50%;
     padding: 15px 0px;
-    right: 100px;
+    width: 50%;
+    
+
 }
 .section3 div.near div.elements>a:hover div.photo{
     overflow: hidden;
     border-radius: 10px;
-    max-width: 110px;
-    max-height: 78.57px;
+    max-width: 160px;
+    max-height: 110px;
 }
 .section3 div.near div.elements>a:hover div.text h3{
     text-decoration: underline;
 }
-.section3 div.near div.elements>a div.photo img{
-    transition:transform 0.9s ease;
-    object-fit: cover;  
-    
+.section3 div.near div.elements>a>div.photo1{
+    background-image: url(../imgs/nearyou01.jpg);  
 }
-.section3 div.near div.elements>a:hover div.photo img{
-    transform: scale(1.1);
+.section3 div.near div.elements>a>div.photo2{
+    background-image: url(../imgs/nearyou02.jpg);  
 }
-.section3 div.near div.elements>a>div.photo>img{
+.section3 div.near div.elements>a>div.photo3{
+    background-image: url(../imgs/nearyou03.jpg);  
+}
+.section3 div.near div.elements>a>div.photo4{
+    background-image: url(../imgs/nearyou04.jpg);  
+}
+.section3 div.near div.elements>a>div.photo5{
+    background-image: url(../imgs/nearyou05.jpg);  
+}
+.section3 div.near div.elements>a>div.photo6{
+    background-image: url(../imgs/nearyou06.jpg);  
+}
+
+.section3 div.near div.elements>a>div.ph{
+    background-repeat: no-repeat;
+    padding: 0px;
     width: 110px;
-    border: 2px;
+    height: 80px;
+    position: relative;
     border-radius: 10px;
+    transition: background-size 0.5s ease;
+    background-position: center;
+    background-size:110px;
     
 } 
-.section3 div.near div.elements>a>div{
+.section3 div.near div.elements>a:hover div.ph{
+    background-size: 120px;
+
+}
+.section3 div.near div.elements>a>div.ph{
     margin-right: 20px;
 }
 .section3 div.near div.elements>a>div.text{
@@ -833,13 +893,15 @@ section.section2 div.elements a p{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    width: 87%;
+    align-content: center;
     margin: 0 auto;
 }
 .section4 header {
+   
     display: flex;
     justify-content: space-between;
-    padding: 100px 0px 40px;
+    align-items: center;
+    padding: 100px 0px 50px;
 } 
 .section4 header h1{
     font-size: 32px;
@@ -849,15 +911,18 @@ section.section2 div.elements a p{
     text-decoration: underline;
 }
 .section4 div.elements{
+    
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 .section4 div.elements a{
-    width: calc(33%-200px);
+    
     height: max-content;
     border: 1px solid #E5E5E5;
     border-radius: 10px;
+    flex: 1;
 }
 
 .section4 div.elements>a>div.text{
@@ -903,8 +968,9 @@ section.section2 div.elements a p{
 .section4 div.elements a{
     overflow: hidden;
     border-radius: 10px;
-    max-width: 420px;
-    max-height: 290px.57px;
+    max-width: 33%;
+    overflow: hidden;
+    
     
 }
 
@@ -927,41 +993,54 @@ section.section2 div.elements a p{
 .section4 div.elements a div.photo1{
     background-image: url( ../imgs/popularprojects01.jpg);
     background-repeat: no-repeat;
-    background-size:cover;
+  
     width: 430px;
     height: 290px;
     position: relative;
     border-radius: 10px;
     transition: background-size 0.5s ease;
     background-position: center;
-    background-size: 100%;
+
+    min-width: 135px;
+    min-height: 150px;
+    
+    background-size:440px;
 }
 
 .section4 div.elements a div.photo2{
     background-image: url( ../imgs/popularprojects02.jpg);
 
      background-repeat: no-repeat;
-    background-size:cover;
+
     width: 430px;
     height: 290px;
     position: relative;
      border-radius: 10px;
      transition: background-size 0.5s ease;
     background-position: center;
-    background-size: 100%;
+    padding: 0px;
+
+        min-width: 135px;
+    min-height: 150px;
+    
+    background-size:440px;
 }
 .section4 div.elements a div.photo3{
    
     background-image: url( ../imgs/popularprojects03.jpg);
      background-repeat: no-repeat;
-    background-size:cover;
+
     width: 430px;
     height: 290px;
     position: relative;
      border-radius: 10px;
     transition: background-size 0.5s ease;
     background-position: center;
-    background-size: 100%;
+
+        min-width: 135px;
+    min-height: 150px;
+    
+    background-size:440px;
 }
 .section4 div.elements a>div>.filter{
     position: absolute;
@@ -996,7 +1075,7 @@ section.section2 div.elements a p{
     
 }
 .section4 div.elements a:hover>div{
-    background-size: 110%;
+    background-size: 450px;
 
 }
 
@@ -1035,35 +1114,48 @@ section.section2 div.elements a p{
     flex-wrap: wrap;
     margin: 0 auto;
     background-color: #F5F7FA;
+    background-size: 100%;
     align-content: center;
+    box-sizing: border-box;
+    justify-content: space-around;
     margin-top: 100px;
+    padding: 0px clamp(30px, 5vw, 30px) 0 clamp(10px, 10vw, 50px); 
+
 }
 .section5 header {
-    width: 87%;
+    
     display: flex;
     justify-content: space-between;
-    padding: 100px 0px 50px;
+    align-items: center;
+    padding: 50px 0px 50px;
+        padding: 50px clamp(30px, 5vw, 30px) 50 clamp(10px, 10vw, 50px); 
+
 } 
 .section5 header h1{
     font-size: 32px;
     font-weight: 600;
 }
 .section5 div.elements{
-     width: 87%;
+    
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
-    padding-bottom: 30px;
+
+    padding-bottom: 20px;
+    justify-content: space-around;
+    
 }
 .section5 div.elements a{
     width: 50%;
-    height: 180px;
+
     border-radius: 10px;
     display: flex;
     flex-direction: row;
-    padding-bottom: 50px;
+    padding-bottom: 100px;
     overflow: hidden;
+    
+    height: max-content;
+   
 }
 .section5 header a:hover{
     text-decoration: underline;
@@ -1115,16 +1207,18 @@ section.section2 div.elements a p{
 .section5 div.elements a div.ph{
     background-repeat: no-repeat;
     padding: 0px;
-    width: 220px;
+    width: 100px;
     height: 150px;
     position: relative;
     border-radius: 10px;
     transition: background-size 0.5s ease;
+    min-width: 135px;
+    min-height: 150px;
     background-position: center;
-    background-size: 100%;
+    background-size:135px;
 }
-.section5 div.elements a:hover>div{
-    background-size: 110%;
+.section5 div.elements a:hover>div.ph{
+    background-size: 150px;
 
 }
 .section5 div.elements a:hover>div.text>h4{
@@ -1135,11 +1229,20 @@ section.section2 div.elements a p{
 .section6{
     display: flex;
     flex-direction: column;
-    width: 87%;
+   
     padding: 100px 0px;
     margin: 0 auto;
-    justify-content: space-between;
+
     line-height: 40px;
+
+
+       width: 100%;
+    justify-content: space-around;
+    box-sizing: border-box;
+
+    padding: 100px clamp(30px, 5vw, 30px) 100 clamp(10px, 10vw, 50px); 
+
+    
 }
 .section6 header{
     display: flex;
@@ -1189,12 +1292,13 @@ section.section2 div.elements a p{
 .section7{
     display: flex;
     flex-direction: row;
-   
+    margin: 0 auto;
     height: 550px;
     margin-bottom: 100px;
     position: relative;
-    justify-content: space-around;
+    justify-content: center;
     margin-bottom: 100px;
+    
     
 }
 
@@ -1202,18 +1306,20 @@ section.section2 div.elements a p{
 .section7>div.left{
     width: 50%;
     background-color: #3D7A81;
-    justify-content: center;
+   
     align-items: flex-start;        
     display: flex;
     flex-direction: column;
+     justify-content: center;
+         padding-left: clamp(20px, 5vw, 100px);
+    
 }
 .section7>div.left>div.buttons{
     display: flex;
     flex-direction: row;
-    margin-left: 100px;
-    
-    justify-content: space-between;
-    
+
+
+
 }
 .section7>div.left>div.buttons>a{
    
@@ -1257,13 +1363,12 @@ section.section2 div.elements a p{
     color: white;
     font-size: 30px;
     font-weight: 600;
-    width: 530px;
+    max-width: 400px;
 
 
 }
 .section7 >div.left>header{
     padding-bottom: 50px;
-    padding-left: 100px;
 
 }
 
@@ -1279,7 +1384,7 @@ section.section2 div.elements a p{
 
 
 .section7 div.center{
-  animation: rotate 10s linear infinite;
+  animation: rotate 20s linear infinite;
   position: absolute;
   justify-content: center;
   align-items: center;
@@ -1304,11 +1409,12 @@ section.section2 div.elements a p{
 
 
 .section8{
-    width: 87%;
+   
     display: flex;
     position: relative;
     flex-direction: row;
     height: 300px;
+
     background-color: #FBEEEE;
     margin: 0px auto;
 }
@@ -1322,12 +1428,20 @@ section.section2 div.elements a p{
     align-content: center;
     line-height: 2;
 }
+.section8>div.icons{
+   
+    display: flex;
+    align-items: center;
+    align-content: center;
+    height: auto;
+}
 .section8 div.img{
     background-image: url(../imgs/app.png);
     background-repeat: no-repeat;
     padding-right: 50px;
-    background-size: 100%;
+    background-size: 100% 100%;
     right: 0%;
+    height: auto;
 }
 .section8 div.text{
     display: flex;
@@ -1341,19 +1455,28 @@ section.section2 div.elements a p{
     color: white;
     font-size: 15px;
     font-weight: 500;
+    display: flex;
+    flex-wrap: wrap;
 }
 .section8 h1{
     font-size: 38px;
     font-weight: 600;
+    display: flex;
+    flex-wrap: wrap;
 }
 .section8 h6{
     font-size: 15px;
     font-weight: 300;
+    display: flex;
+    flex-wrap: wrap;
 }
 .section8 div.logos{
     display: flex;
     flex-direction: row;
     padding: 20px 0px;
+    max-height: 50px;
+    align-items: center;
+    align-content: center;
 }
 .section8 div.logos a{
     display: flex;
@@ -1363,8 +1486,7 @@ section.section2 div.elements a p{
     background-color: black;
     color: white;
     margin-right: 15px ;
-     align-items: center;
-  justify-content: center;
+    justify-content: center;
     transition: background-color 0.5s ease;
     
 }
@@ -1390,13 +1512,18 @@ background-color: #333D4C;
 .section9{
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+   
     margin: 0 auto;
     align-content: center;
-    margin-top: 100px;
+
+    background-size: 100%;
+    box-sizing: border-box;
+    justify-content: space-around;
+    
+    padding: 0px clamp(30px, 5vw, 30px) 0 clamp(10px, 10vw, 50px); 
+
 }
 .section9 header {
-    width: 87%;
     display: flex;
     justify-content: space-between;
     padding: 100px 0px 50px;
@@ -1406,7 +1533,7 @@ background-color: #333D4C;
     font-weight: 600;
 }
 .section9 div.elements{
-     width: 87%;
+
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -1415,8 +1542,9 @@ background-color: #333D4C;
     row-gap: 20px;
 }
 .section9 div.elements a{
+    max-width: 50%;
     width: 48%;
-    height: 180px;
+    height: max-content;
     border-radius: 10px;
     border: 1px solid #F2F2F2;
     display: flex;
@@ -1452,10 +1580,15 @@ background-color: #333D4C;
     border-radius: 10px;
     transition: background-size 0.5s ease;
     background-position: center;
-    background-size: 100%;
+    
+    min-width: 135px;
+    min-height: 150px;
+    width: 150px;
+    height: 180px;
+    background-size:200px;
 }
 .section9 div.elements a:hover>div{
-    background-size: 110%;
+    background-size: 220px;
 
 }
 .section9 div.elements a:hover>div.text>h4{
@@ -1727,6 +1860,10 @@ footer div.media div.rights h2{
 
 
 }
+footer div.media div.rights h2:hover{
+    text-decoration: underline;
+}
+
 footer div.cities{
     display: flex;
     flex-direction: row;
@@ -1759,4 +1896,200 @@ footer div.cities>div>a:hover{
 footer div.cities>div>a>h3{
     font-size: 14px;
     font-weight: 500;
+}
+
+
+
+
+
+
+
+.menu-icon {
+    visibility: hidden;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  margin-left: 30px;
+  opacity: 0;
+pointer-events: none;
+position: absolute;
+z-index: 10001;
+top: 10px;
+left: 20px;
+padding: 10px;
+transition: background-color 0.5s ease;
+border-radius: 7px;
+
+}
+
+
+@media screen and (max-width: 1200px) {
+
+     header.logo_and_nav div.icons a.big{
+       display: none;
+    }
+    header.logo_and_nav div.icons a.small{
+        display: inline;
+        margin-right: 30px;
+        padding: 10px 20px;
+        max-width: 100px;
+
+    }
+
+       
+    .section3 div.local div.home{
+        transform: translate(-20px,-270px);
+
+    }
+    .section3 div.local div.circle{
+        transform: translate(-50px,-300px);
+        clip-path: inset(0px 135px 199.7px 50.5px); 
+    }
+    .section3 div.local div.home img{
+        width: 340px;
+    }
+}
+@media screen and (max-width: 991px) {
+    header div.logo{
+        padding-left: 50px;
+    }
+   
+
+    header div.icons{
+        margin-right: 0px;
+        padding-right: 0px;
+    }
+    .menu-icon {
+        visibility: visible;
+        opacity: 1;
+        pointer-events: auto;
+        color: #111827;
+    }
+    header div.logo,div.icons{
+        flex: 1;
+        text-align: right;
+    }
+    header div.icons i{
+        margin-left: auto;
+        
+    }
+    header div.logo>a{
+        margin-left: auto;
+        padding-right: 20px;
+    }
+
+    header nav.pages {
+        visibility: hidden;
+        background-color: #444;
+        position: absolute;
+        left: 0%;
+        top: 50px;
+        height: 10000;
+    }
+    header nav.pages>ul.mainpages {
+        display: flex;
+        flex-direction: column;
+        max-width: 300px;
+        flex-wrap: wrap;
+        justify-content: center;
+        height: 10000px;
+    }
+
+    div.menu-icon:hover~nav.pages {
+        visibility: visible;
+        pointer-events: auto;
+        background-color: #F2F3F5;
+    }
+    nav.pages:hover {
+        visibility: visible;
+        pointer-events: auto;
+    }
+    header nav.pages > ul.mainpages > li>a{
+        padding: 0px 85px;
+    }
+    header nav.pages > ul.mainpages > li>ul{
+        display: flex;
+        flex-direction: column;
+        position: static;
+        z-index: 0;
+    }
+
+
+
+
+
+    section.section2 div.elements{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+    }section.section2 div.elements a{
+        display: flex;
+        width: 33.333%;
+        padding: 10px 0px;
+        
+    }
+
+    
+    .section3>div.local{
+        display: none;
+    }
+    .section3>div.near{
+        
+    }
+
+
+    .section5 div.elements{
+        display: flex;
+        flex-direction: column;
+
+    }
+    .section5 div.elements a{
+        width: 100%;
+        padding-bottom: 40px;
+
+    }
+    .section7>div.left>div.buttons{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .section7>div.left>div.buttons>a{
+    padding: 15px 70px;
+    }
+
+}
+@media screen and (max-width: 760px) {
+   section.section2 div.elements{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+    }section.section2 div.elements a{
+        display: flex;
+        width: 50%;
+        padding: 10px 0px;
+        
+    }
+}
+@media screen and (max-width: 450px) {
+    section.section2 div.elements{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+    }section.section2 div.elements a{
+        display: flex;
+        width: 50%;
+        padding: 10px 0px;
+        
+    }
+}
+
+@media screen and (max-width: 300px) {
+    section.section2 div.elements{
+        display: flex;
+        flex-direction: column;
+        width:auto;
+    }
 }
