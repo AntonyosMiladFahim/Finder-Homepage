@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="fontawesome/css/all.min.css">
     <link rel="icon" href="imgs/logoop.png" type="image/png" >
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
 </head>
 <body>
@@ -126,7 +127,7 @@
                     <ul class="homemenu">
                         <li class="auth">
                             <div>
-                                <a href="#"><p>auth pages</p><i class="fa-solid fa-chevron-right"></i></a> 
+                                <a href="#">auth pages<i class="fa-solid fa-chevron-right"></i></a> 
                                 
                             </div>
 
@@ -445,14 +446,15 @@
         <!-- end section3 -->
 
         <!-- start section4 -->
-        <section class="section4">
+        <section class="section4 swiper mySwiper">
+
             <header>
                 <h1>Popular home projcts </h1>
                 <a href="#">View All <i class="fa-solid fa-angle-right"></i></a>
             </header>
-            <div class="elements">
+            <div class="elements swiper-wrapper">
                 <!-- 1 -->
-                <a href="#">
+                <a href="#" class="swiper-slide">
                     <div class="photo1">
                         <div class="filter"></div>
                         <div class="content">
@@ -471,7 +473,7 @@
                     </div>
                 </a>
                 <!-- 2 -->
-                <a href="#">
+                <a href="#" class="swiper-slide">
                     <div class="photo2">
                          <div class="filter"></div>
                         <div class="content">
@@ -489,7 +491,7 @@
                     </div>
                 </a>
                 <!-- 3 -->
-               <a href="#">
+               <a href="#" class="swiper-slide">
                     <div class="photo3">
                          <div class="filter"></div>
                         <div class="content">
@@ -507,7 +509,7 @@
                     </div>
                 </a>
             </div>
-            
+             <div class="swiper-pagination"></div>
 
         </section>
         <!-- end section4 -->
@@ -583,7 +585,7 @@
         <!-- end section5 -->
 
         <!-- start section6 -->
-        <section class="section6">
+        <section class="section6 ">
             <header>
                 <h1>How it works</h1>
                 <h6>Effortlessly find, connect, and hire the perfect contractor for your job - all in just three easy steps.</h6>
@@ -649,7 +651,6 @@
                         <div class="logos">
                             <a href="#"><i class="fa-brands fa-apple"></i><h3>App Store</h3> </a>
                             <a href="#"><i class="fa-brands fa-google-play"></i><h3>Google Play</h3> </a>
-                    
                         </div>
                     </header>
     
@@ -743,7 +744,7 @@
         <div class="subs">
             <div class="icon">
                 <i class="fa-regular fa-envelope"></i>
-                <h4>subscribe to our newsletter</h4>
+                <h4>Subscribe to our newsletter</h4>
                 <h3>Subscribe</h3>
             </div>
             <div class="help">
@@ -809,7 +810,7 @@
             </div>
         </div>
         <div class="media">
-            <div class="rights">
+            <div class="rights apparent">
                 <h3>© All rights reserved. Made by</h3>
                 <h2>Createx Studio</h2>
             </div>
@@ -820,10 +821,29 @@
                 <img src="svgs/google-pay-dark-mode.svg" alt="">
                 <img src="svgs/apple-pay-dark-mode.svg" alt="">
             </div>
+            <div class="rights hide">
+                <h3>© All rights reserved. Made by</h3>
+                <h2>Createx Studio</h2>
+            </div>
         </div>
 
     </footer>
     <!-- end footer -->
-    
+
+
+
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      centeredSlides: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>
 </body>
 </html>

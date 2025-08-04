@@ -134,16 +134,16 @@ header.logo_and_nav nav.pages ul.mainpages li.Home ul.homemenu li a img {
   position: absolute;
   
   left: 100%;
-  height: 400px;
+  height: 363px;
 }
 header.logo_and_nav nav.pages ul.mainpages li.Home ul.homemenu li a img.re {
     top: -22px;
 }
 header.logo_and_nav nav.pages ul.mainpages li.Home ul.homemenu li a img.cars {top: -78px;}
 header.logo_and_nav nav.pages ul.mainpages li.Home ul.homemenu li a img.cont {top: -135px;}
-header.logo_and_nav nav.pages ul.mainpages li.Home ul.homemenu li a img.doc {top: -212px;}
-header.logo_and_nav nav.pages ul.mainpages li.Home ul.homemenu li a img.ev {top: -287px;}
-header.logo_and_nav nav.pages ul.mainpages li.Home ul.homemenu li a img.cg {top: -344px;}
+header.logo_and_nav nav.pages ul.mainpages li.Home ul.homemenu li a img.doc {top: -192px;}
+header.logo_and_nav nav.pages ul.mainpages li.Home ul.homemenu li a img.ev {top: -250px;}
+header.logo_and_nav nav.pages ul.mainpages li.Home ul.homemenu li a img.cg {top: -306px;}
  
 header.logo_and_nav nav.pages ul.mainpages li.Home ul.homemenu li:hover a img {
         visibility: visible;
@@ -258,11 +258,9 @@ header.logo_and_nav nav.pages ul.mainpages li.Account ul.homemenu li.auth div a{
     flex-direction: row;
     flex-basis: 0;
     justify-content: space-between;
-    
+    font-weight: 300;
 }
-header.logo_and_nav nav.pages ul.mainpages li.Account ul.homemenu li.auth div a p{
-    margin-left: 10px;
-}
+
 
 header.logo_and_nav nav.pages ul.mainpages li.Account ul.homemenu li.auth{
     display: flex;
@@ -453,23 +451,20 @@ footer>*{
     max-width: 1328px;
 }
 
-.section5>*{
-    max-width: 1328px;
-}
 main section.section1 {
     background-image: url(../imgs/header\ full\ hero.png);
     background-size:142.5%;
     background-repeat: no-repeat;
     background-size: 2160px;
     background-position: center center;
-    height: 683px;
+    padding: 170px 0px;
     background-color: #3D7A81;
     align-content: center;
-
 }
 main section.section1 div.form{
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
 }
 main section.section1 div.form form input.search1 {
@@ -478,7 +473,6 @@ main section.section1 div.form form input.search1 {
     background-size: 20px;
     background-position: 5px center;
     width: max-content;
-
 }
 main section.section1 div.form form input.search2 {
     background-image: url(../svgs/location-dot-solid-full.svg);
@@ -486,26 +480,30 @@ main section.section1 div.form form input.search2 {
     background-size: 20px;
     background-position: 20px center;
     width: max-content;
-    
-
+    border-left: 1px solid rgba(0,0,0,0.1);
+}
+main section.section1 div.form header{
+    max-width: 50%;
 }
 main section.section1 div.form header h1{
     font-size: 56px;
     letter-spacing: 1.5px;
     transform: scaleX(0.96);
     color: white;
-    width: 670px;
+    
     text-align: center;
     padding-bottom: 50px;
     font-weight: 700;
+    
 }
 main .section1 .form form{
     padding: 13px;
     background-color: white;
     border: 3px;
     border-radius: 10px;
-    width: 600px;
+    
     display: flex;
+    flex-wrap: wrap;
 }
 main .section1 .form form input::placeholder{
     height: 47px;
@@ -519,14 +517,13 @@ main .section1 .form form input{
 main .section1 .form form input.search1{
     flex: 5; 
     padding-left: 35px;
-    border-right: 1px solid rgba(0,0,0,0.1);
-   
+    z-index: 44;
 }
 main .section1 .form form input:focus{
     outline: none;
 }
 main .section1 .form form input.button{
-    flex: 1.8; 
+    width: 15%;
     color: white;
     background-color: #D85151;
     transition: background-color 0.3s ease;
@@ -546,8 +543,6 @@ main .section1 .form form input.search2 {
     flex: 2;
     min-width: 0; 
     padding-left: 50px;
-    
-
 } 
 
 
@@ -605,7 +600,7 @@ main .section1 ul li a:hover p{
     justify-content: space-around;
     box-sizing: border-box;
     margin: 0 auto;
-    padding: 0px clamp(30px, 5vw, 30px) 0 clamp(10px, 10vw, 50px); 
+    padding: 0px clamp(30px, 5vw, 30px) 0px clamp(10px, 10vw, 50px); 
 
     
 }
@@ -643,14 +638,11 @@ section.section2 div.elements{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-around;   
 }
 section.section2 div.elements a{
     display: flex;
-    width: max-content;
-
-    width: 25%;
     padding: 15px 0px;
+    width: 25%;
 }
 section.section2 div.elements a:hover p{
     text-decoration: underline;
@@ -682,7 +674,7 @@ section.section2 div.elements a p{
     width: 100%;
     
     margin: 0 auto;
-    padding: 100px clamp(30px, 5vw, 100px) 0 clamp(0px, 5vw, 20px); 
+    padding: 100px clamp(30px, 5vw, 100px) 0px clamp(0px, 5vw, 20px); 
 
     
 }
@@ -893,8 +885,11 @@ section.section2 div.elements a p{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    width: 90%;
     align-content: center;
     margin: 0 auto;
+    padding: 0px clamp(30px, 5vw, 30px) 0px clamp(10px, 10vw, 50px); 
+
 }
 .section4 header {
    
@@ -914,7 +909,7 @@ section.section2 div.elements a p{
     
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+
     justify-content: space-between;
 }
 .section4 div.elements a{
@@ -968,9 +963,9 @@ section.section2 div.elements a p{
 .section4 div.elements a{
     overflow: hidden;
     border-radius: 10px;
-    max-width: 33%;
+    min-width: 32%;
     overflow: hidden;
-    
+    width: 33%;
     
 }
 
@@ -1119,7 +1114,7 @@ section.section2 div.elements a p{
     box-sizing: border-box;
     justify-content: space-around;
     margin-top: 100px;
-    padding: 0px clamp(30px, 5vw, 30px) 0 clamp(10px, 10vw, 50px); 
+    padding: 0px clamp(30px, 5vw, 30px) 0px clamp(10px, 10vw, 50px); 
 
 }
 .section5 header {
@@ -1127,9 +1122,7 @@ section.section2 div.elements a p{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 50px 0px 50px;
-        padding: 50px clamp(30px, 5vw, 30px) 50 clamp(10px, 10vw, 50px); 
-
+    padding: 100px 0px 100px;
 } 
 .section5 header h1{
     font-size: 32px;
@@ -1147,15 +1140,12 @@ section.section2 div.elements a p{
 }
 .section5 div.elements a{
     width: 50%;
-
     border-radius: 10px;
     display: flex;
     flex-direction: row;
     padding-bottom: 100px;
     overflow: hidden;
-    
-    height: max-content;
-   
+    height: max-content;  
 }
 .section5 header a:hover{
     text-decoration: underline;
@@ -1229,18 +1219,13 @@ section.section2 div.elements a p{
 .section6{
     display: flex;
     flex-direction: column;
-   
-    padding: 100px 0px;
     margin: 0 auto;
-
     line-height: 40px;
 
-
-       width: 100%;
     justify-content: space-around;
     box-sizing: border-box;
-
-    padding: 100px clamp(30px, 5vw, 30px) 100 clamp(10px, 10vw, 50px); 
+    align-content: center;
+    padding: 100px clamp(30px, 5vw, 30px) 100px clamp(10px, 10vw, 50px); 
 
     
 }
@@ -1294,35 +1279,27 @@ section.section2 div.elements a p{
     flex-direction: row;
     margin: 0 auto;
     height: 550px;
-    margin-bottom: 100px;
     position: relative;
     justify-content: center;
-    margin-bottom: 100px;
-    
-    
+    margin-bottom: 100px;  
 }
 
 
 .section7>div.left{
     width: 50%;
     background-color: #3D7A81;
-   
     align-items: flex-start;        
     display: flex;
     flex-direction: column;
-     justify-content: center;
-         padding-left: clamp(20px, 5vw, 100px);
+    justify-content: center;
+    padding-left: clamp(20px, 5vw, 100px);
     
 }
 .section7>div.left>div.buttons{
     display: flex;
     flex-direction: row;
-
-
-
 }
 .section7>div.left>div.buttons>a{
-   
     margin-right: 30px;
     padding: 15px 20px;
     border-radius: 10px;
@@ -1414,7 +1391,6 @@ section.section2 div.elements a p{
     position: relative;
     flex-direction: row;
     height: 300px;
-
     background-color: #FBEEEE;
     margin: 0px auto;
 }
@@ -1488,6 +1464,7 @@ section.section2 div.elements a p{
     margin-right: 15px ;
     justify-content: center;
     transition: background-color 0.5s ease;
+    align-items: center;
     
 }
 .section8 div.logos a:hover{
@@ -1633,7 +1610,6 @@ background-color: #333D4C;
 }
 
 .section9 div.elements>a>div.text>h3{
-    
     font-weight: 400;
     font-size: 15px;
     margin-top: auto;
@@ -1676,6 +1652,7 @@ margin: 0 auto;
 footer div.subs{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
     padding: 40px 0px;
     border-bottom: 1px solid #222A3A;
@@ -1686,6 +1663,7 @@ footer div.subs div.icon{
     justify-content: center;
     align-items: center;
     align-content: center;
+    align-items: center;
 }
 footer div.subs div.icon h4{
     padding: 0px 10px; 
@@ -1713,15 +1691,16 @@ footer div.subs div.help{
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin: 0px auto;
 }
 footer div.subs div.help h6{
     padding-right: 20px;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 100;
 }
 footer div.subs div.help a h3{
     padding-right: 20px;
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 600;
 }
 footer div.subs div.help a:hover h3{
@@ -1730,16 +1709,15 @@ footer div.subs div.help a:hover h3{
 footer div.nav {
     display: flex;
     flex-direction: row;
-        padding: 40px 0px 0px;
+    flex-wrap: wrap;
+    padding: 40px 0px 0px;
 
 }
 footer div.nav div.logo{
-    flex: 3;
+    width: 40%;
     display: flex;
     flex-direction: column;
     gap: 30px;
-
-
 }
 footer div.nav div.logo h6{
     width: 50%;
@@ -1837,6 +1815,9 @@ footer div.media{
     flex-direction: row;
     justify-content: space-between;
     padding: 30px 0px;
+}
+footer div.hide{
+    display: none;
 }
 footer div.media div.payments{
     display: flex;
@@ -1987,6 +1968,26 @@ border-radius: 7px;
         top: 50px;
         height: 10000;
     }
+    header nav.pages>ul.mainpages>li.listings>ul.listingsmenu {
+        max-height: 400px;
+
+    }
+    header.logo_and_nav nav.pages ul.mainpages li.listings ul.listingsmenu>li>ul{
+    padding-right: 0px;
+}
+header.logo_and_nav nav.pages ul.mainpages li.listings ul.listingsmenu>li>h4{
+    font-weight: 500;
+    font-size: 13px;
+}
+header.logo_and_nav nav.pages ul.mainpages li.listings ul.listingsmenu>li>ul>li>a{
+    font-weight: 300;
+    font-size: 10px;
+}
+
+header.logo_and_nav nav.pages ul.mainpages li.listings ul.listingsmenu>li{
+    padding: 3px;
+    line-height: 1.2;
+}
     header nav.pages>ul.mainpages {
         display: flex;
         flex-direction: column;
@@ -2014,11 +2015,19 @@ border-radius: 7px;
         position: static;
         z-index: 0;
     }
-
-
-
-
-
+    
+    main section.section1{
+        padding: 70px 0px;
+    }
+   main section.section1 div.form header{
+    max-width: 80%;
+}
+    main section.section2 header {
+        padding-top: 70px;
+    }
+    main section.section2 {
+        padding: 0px clamp(30px, 5vw, 30px) 0px clamp(10px, 10vw, 50px); 
+    }
     section.section2 div.elements{
         display: flex;
         flex-direction: row;
@@ -2031,14 +2040,19 @@ border-radius: 7px;
         
     }
 
-    
+    main .section3{
+        padding-top: 30px;
+    }
     .section3>div.local{
         display: none;
     }
     .section3>div.near{
         
     }
-
+    main .section5 header{
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
 
     .section5 div.elements{
         display: flex;
@@ -2050,6 +2064,14 @@ border-radius: 7px;
         padding-bottom: 40px;
 
     }
+    main .section6 {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    main .section7{
+        height: 430px;
+        margin-bottom: 60px;
+    }
     .section7>div.left>div.buttons{
         flex-direction: column;
         gap: 20px;
@@ -2057,9 +2079,76 @@ border-radius: 7px;
     .section7>div.left>div.buttons>a{
     padding: 15px 70px;
     }
+    main .section8{
+        height: 250px;
+    }
+    main .section9 header{
+        padding-top: 70px;
+        padding-bottom: 30px;
+
+    }
+    main .section9 div.elements{
+
+        padding-bottom: 60px;
+
+    }
+
 
 }
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 767px) {
+   header.logo_and_nav{
+    height: 36px;
+   }
+
+main section.section1 div.form header h1{
+    font-size: 32px;
+
+}
+   main .section1 div.form form{
+    width: 90%;
+   }
+   main .section1 div.form form input.button{
+    width: 100%;
+    margin-top: 20px;
+   }
+   main .section1 div.form form input.search2{
+    flex: 1;
+    
+   }
+   main .section1 div.form form input.search1{
+    flex: 3;
+   }
+   main .section1 div.form form{
+
+        justify-content: space-between;
+        column-gap: 100px;
+   }
+.section2>header>h1{
+    font-size: 20px;
+}
+.section2>header>a{
+    font-size: 15px;
+}
+.section3>div.near>header>h1{
+    font-size: 20px;
+}
+.section3>div.near>header>a{
+    font-size: 15px;
+}
+.section4>header>h1{
+    font-size: 20px;
+}
+.section4>header>a{
+    font-size: 15px;
+
+}
+.section5>header>h1{
+    font-size: 20px;
+}
+.section5>header>a{
+    font-size: 15px;
+}
+
    section.section2 div.elements{
         display: flex;
         flex-direction: row;
@@ -2071,25 +2160,240 @@ border-radius: 7px;
         padding: 10px 0px;
         
     }
+    main.section7{
+        margin-bottom: 20px;
+        max-height: 300px;
+        
+    }
+    main .section7 div.right{
+        display: none;
+        
+    }
+    main .section7 div.left{
+        width: 100%;
+        padding-left: 0px;
+        padding: 10px 0px;
+    }
+    main .section7 div.left div.buttons{
+        
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 0px auto;
+    }
+    main .section7 div.left header{
+        margin: 0px auto;
+    }
+        main .section7 div.left div.buttons>a{
+            margin-right: 10px;
+            padding: 15px 30px;
+            border-radius: 10px;
+        }
+    main .section7 div.center{
+        display: none;
+    }
+    main .section8 {
+        flex-direction: column;
+        height: 400px;
+    }
+    main .section8>div.icons{
+        width: 100%;
+    }
+    main .section8>div.img{
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0px auto;
+        padding-right: 0px;
+        width: 400px;
+        max-width: 95%;
+    }
+    .section9 div.elements{
+        flex-direction: column;
+    }
+    .section9 div.elements>a{
+        max-width: 100%;
+        width: 100%;
+    }
+    .section9 div.elements>a>div.ph{
+        width: 200px;
+        height: 160px;
+        
+    }
+    main .section9>header{
+        padding: 50px 0px 20px;
+    }
+    footer div.subs{
+        flex-direction: column;
+        gap: 30px;
+    }
+    footer div.nav>div.logo{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    footer div.nav>div.categs{
+        flex: 2;
+    }
+    footer div.nav>div.compans{
+        flex: 1;
+    }
+    footer div.media{
+        flex-direction: column;
+    }
+    footer div.media div.payments{
+        margin: 0px auto;
+        padding-bottom: 25px;
+    }
+    footer div.media div.hide{
+        margin: 0px auto;
+        display: flex;
+        flex-direction: row;
+        
+    }
+    footer div.media div.apparent{
+        display:none;
+
+    }
+
+
+
+     .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: white;
+      display: flex;
+      
+    }
+    
+main section.section4{
+    min-width: 85%;
+    max-width: 85%;
+    width: 85%;
 }
-@media screen and (max-width: 450px) {
+.section4 div.elements a{
+    min-width: 100%;
+    
+}
+.section4 div.elements a div.photo1{
+    width: 100%;
+    background-size: 100%;
+}
+.section4 div.elements a div.photo1:hover{
+    background-size: 110%;
+}
+.section4 div.elements a div.photo2{
+    width: 100%;   
+    background-size: 100%;
+}
+.section4 div.elements a div.photo2:hover{
+    background-size: 110%;
+}
+.section4 div.elements a div.photo3{
+    width: 100%;
+    background-size: 100%;
+}
+.section4 div.elements a div.photo3:hover{
+    background-size: 110%;
+}
+
+
+.section6 header h1{
+    font-size: 24px;
+    font-weight: 600;
+}
+.section6 h3{
+    font-size: 18px;
+    font-weight: 500;
+}
+.section6 i{
+    font-size: 30px;
+    padding: 25px 0px;
+}
+.section6 h6{
+    font-size: 15px;
+    font-weight: 300;
+}
+
+
+
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+}
+@media screen and (max-width: 500px) {
+    main .section1 div.form form{
+        flex-direction: column;
+        width: 90%;
+    }
+    .section1 div.form form input.search1{
+        margin-left: 15px;
+    }
+    main section.section1 div.form form input.search2{
+        min-height: 50px;
+        border-top: 1px solid rgba(0,0,0,0.1);
+        border-left: 0px;
+    }
+    .section1 div.form form input[type=search]{
+        min-height: 50px;
+        min-width: 95%;
+        
+        
+    }
     section.section2 div.elements{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
 
-    }section.section2 div.elements a{
+    }
+    section.section2 div.elements a{
         display: flex;
-        width: 50%;
+        width: 100%;
         padding: 10px 0px;
         
     }
-}
-
-@media screen and (max-width: 300px) {
-    section.section2 div.elements{
-        display: flex;
+    main .section3 div.near div.elements{
         flex-direction: column;
-        width:auto;
+    }
+    main .section3 div.near div.elements a{
+        width: 100%;
+    }
+    main .section7 div.left div.buttons{
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin: 0px auto;
+        justify-content: center;
+    }
+    main .section7 div.left div.buttons a{
+        padding: 12px 120px;
+    }
+        main .section8 {
+        flex-direction: column;
+        height: 500px;
+    }
+    .section8 div.icons header div.logos{
+    flex-direction: column;
+    gap: 20px;
+    }
+    .section8 div.icons header div.logos a{
+        width: 100%;
+    }
+    main .section8 div.img{
+
+        width: 100%;
+    }
+    .section8 {
+        height: 300px;
     }
 }
+
+
