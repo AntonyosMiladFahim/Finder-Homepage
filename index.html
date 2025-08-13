@@ -4,36 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Finder | Homepage</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styledark.css">
     <link rel="stylesheet" href="fontawesome/css/all.min.css">
     <link rel="icon" href="imgs/logoop.png" type="image/png" >
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
 </head>
 <body>
-    
-    
+    <div class="customize clickme"><a href="#">customize <i class="fa-solid fa-gear"></i></a></div>
+    <div>
+    <ul class="sidebar hidden">
+        <li class="ex"><a href="#"><i class="fa-solid fa-x xicon"></i></a></li>
+        <li id="c1"></li>
+        <li id="c2"></li>
+        <li id="c3"></li>
+        <li id="c4"></li>
+    </ul>
 
+    </div>
+  
     <!-- start header -->
     <header class="logo_and_nav">
+        
+
         <div class="menu-icon"><i class="fa-solid fa-bars"></i></div>
 
         <!-- logo -->
         <div class="logo">
-            <a href="#"><img src="imgs/logofinder.png" width="40" alt="" >Finder</a>
+            <a href="#"><img src="imgs/logoop.png" width="35" alt="" >Finder</a>
         </div>
         <!-- stat nav -->
-        <nav class="pages">
+        <nav class="pages togglednav" id="togglednav">
             <ul class="mainpages">
                 <li class="Home">
                     <a class="ahome" href="#">Home <i class="fa-solid fa-chevron-down"></i></a> 
                     <ul class="homemenu">
-                        <li><a href="#" ><p><span>Real estate</span>property listing directory</p><img src="imgs/real-estate-light.jpg" alt="" class="re"></a> </li>
-                        <li><a href="#" ><p><span>cars</span>Vehicle sales listings </p><img src="imgs/cars-light.jpg" alt="" class="cars"></a> </li>
-                        <li><a href="#" ><p><span>Contractors</span>professional services directory</p><img src="imgs/contractors-light.jpg" alt="" class="cont"></a></li>
-                        <li><a href="#" ><p><span>Doctors</span>medical professionals listings</p><img src="imgs/doctors-light.jpg" alt="" class="doc"></a></li>
-                        <li><a href="#" ><p><span>Events</span>Upcoming events listings</p><img src="imgs/events-light.jpg" alt="" class="ev"></a></li>
-                        <li><a href="#" ><p><span>City Guide</span>Local places directory</p><img src="imgs/city-guide-light.jpg" alt="" class="cg"></a></li>
+                        <li><a href="#" ><p><span>Real estate</span>property listing directory</p><img src="imgs/real-estate-light.jpg" alt="" class="re trans"></a> </li>
+                        <li><a href="#" ><p><span>cars</span>Vehicle sales listings </p><img src="imgs/cars-light.jpg" alt="" class="cars trans"></a> </li>
+                        <li><a href="#" ><p><span>Contractors</span>professional services directory</p><img src="imgs/contractors-light.jpg" alt="" class="cont trans"></a></li>
+                        <li><a href="#" ><p><span>Doctors</span>medical professionals listings</p><img src="imgs/doctors-light.jpg" alt="" class="doc trans"></a></li>
+                        <li><a href="#" ><p><span>Events</span>Upcoming events listings</p><img src="imgs/events-light.jpg" alt="" class="ev trans"></a></li>
+                        <li><a href="#" ><p><span>City Guide</span>Local places directory</p><img src="imgs/city-guide-light.jpg" alt="" class="cg trans"></a></li>
                     </ul>
                 </li>
                 <li class="listings">
@@ -227,8 +238,17 @@
         </nav>
         <!-- end nav -->
         <!-- icons -->
-        <div class="icons">
-            <a href="#" class="sun"><i class="fa-regular fa-sun"></i></a>
+        <div class="icons ">
+            <div class="sunmodes">
+                 <a href="#" class="sun"><i class=" toggledicon"></i></a>
+                <ul class="modes">
+                    <li class="lilight"><a href="#" class="light"><i class="fa-regular fa-sun"></i> light</a></li>
+                    <li class="lidark"><a href="#" class="dark"><i class="fa-solid fa-moon"></i>dark</a></li>
+                    <li class="liauto"><a href="#" class="auto"><i class="fa-solid fa-circle-half-stroke"></i>auto</a></li>
+                </ul>
+            
+            </div>
+               
             
             <a href="#" class="user"><i class="fa-regular fa-user"></i></a>
             <a href="#" class="join big">+join pro network</a>
@@ -845,5 +865,6 @@
       },
     });
   </script>
+  <script src="js/javascript.js"></script>
 </body>
 </html>
