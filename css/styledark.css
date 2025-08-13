@@ -82,6 +82,7 @@ ul.sidebar{
 ul.sidebar li.ex>a>i{
     color: white;
 }
+
 ul.sidebar li.ex{
     width: 100%;
     display: flex;
