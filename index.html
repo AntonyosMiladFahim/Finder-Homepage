@@ -15,11 +15,12 @@
     <div>
     <ul class="sidebar hidden">
         <li class="ex"><a href="#"><i class="fa-solid fa-x xicon"></i></a></li>
-        <li id="c1"></li>
-        <li id="c2"></li>
-        <li id="c3"></li>
-        <li id="c4"></li>
+        <li id="c1">
+            <label for="colorpanel">change button color : </label>
+            <input type="color" id="colorpanel" value="#D85151" >
+        </li>
     </ul>
+    
 
     </div>
   
@@ -251,8 +252,8 @@
                
             
             <a href="#" class="user"><i class="fa-regular fa-user"></i></a>
-            <a href="#" class="join big">+join pro network</a>
-            <a href="#" class="join small">+join</a>
+            <a href="#" class="join big change">+join pro network</a>
+            <a href="#" class="join small change">+join</a>
         </div>
 
         <!-- join pro network -->
@@ -270,7 +271,7 @@
                 <form action="#">
                     <input class="search1" type="search" placeholder="What service do you need?">
                     <input class="search2" type="search" placeholder="Zip code">
-                    <input class="button" type="button" value="search">
+                    <input class="button change" type="button" value="search">
                 </form>
                 <ul>
                     <li><a href="#"><p>Handyperson</p></a></li>
@@ -475,7 +476,7 @@
             <div class="elements swiper-wrapper">
                 <!-- 1 -->
                 <a href="#" class="swiper-slide">
-                    <div class="photo1">
+                    <div class="photo1 photo">
                         <div class="filter"></div>
                         <div class="content">
                             <p>One-time cleaning service</p>
@@ -494,7 +495,7 @@
                 </a>
                 <!-- 2 -->
                 <a href="#" class="swiper-slide">
-                    <div class="photo2">
+                    <div class="photo2 photo">
                          <div class="filter"></div>
                         <div class="content">
                             <p>Handyperson for small projects</p>
@@ -512,7 +513,7 @@
                 </a>
                 <!-- 3 -->
                <a href="#" class="swiper-slide">
-                    <div class="photo3">
+                    <div class="photo3 photo">
                          <div class="filter"></div>
                         <div class="content">
                             <p>Fence installation & repair</p>
@@ -639,7 +640,7 @@
                     <h1>Grow your business with us. Become a Pro today</h1>
                 </header>
                 <div class="buttons">
-                    <a href="#" class="b1"><h4>+ Add buisness</h4></a>
+                    <a href="#" class="b1 change"><h4>+ Add buisness</h4></a>
                     <a href="#" class="b2"><h5><span>learn more </span><i class="fa-solid fa-chevron-right"></i></h5></a>
                 </div>
             </div>
@@ -765,7 +766,7 @@
             <div class="icon">
                 <i class="fa-regular fa-envelope"></i>
                 <h4>Subscribe to our newsletter</h4>
-                <h3>Subscribe</h3>
+                <h3 class="change">Subscribe</h3>
             </div>
             <div class="help">
                 <h6>Need help?</h6>
@@ -856,14 +857,29 @@
 
   <!-- Initialize Swiper -->
   <script>
-    var swiper = new Swiper(".mySwiper", {
-      spaceBetween: 30,
-      centeredSlides: true,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-    });
+    var swiper;
+    function swiperf(){
+        
+        if(window.innerWidth<=766 && swiper==null){
+                swiper = new Swiper(".mySwiper", {
+                spaceBetween: 30,
+                centeredSlides: true,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+            });
+        }else{
+            if(window.innerWidth>766 && swiper!=null){
+                swiper.destroy(true, true);
+                swiper=null;
+            }
+            
+        }
+    }
+    swiperf();
+    window.addEventListener("resize", swiperf);
+   
   </script>
   <script src="js/javascript.js"></script>
 </body>

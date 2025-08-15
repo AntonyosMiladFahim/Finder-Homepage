@@ -44,18 +44,16 @@ ul.sidebar{
 
     flex-direction: row;
     flex-wrap: wrap;
-   
     position: fixed;
     background-color: white;
     z-index: 10009;
     right: 0;
     height: 100%;
-    width: 20%;
-    align-items: center;
-    
+    width: 250px;    
 }
 ul.sidebar li.ex{
     width: 100%;
+    height: 10%;
     display: flex;
     margin: 0 auto;
     justify-content: center;
@@ -63,12 +61,15 @@ ul.sidebar li.ex{
     align-content: center;
 }
 ul.sidebar li#c1{
+        display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
     
-    padding: 50px;
-    border-radius: 50%;
-    background-color: #c92d2d;
+    height: 30%;
 }
-ul.sidebar li#c2{
+/* ul.sidebar li#c2{
   
     padding: 50px;
     border-radius: 50%;
@@ -85,7 +86,7 @@ ul.sidebar li#c4{
     padding: 50px;
     border-radius: 50%;
     background-color: #c92d2d;
-}
+} */
 
  header.logo_and_nav{     
     font-size: 16px;
@@ -172,8 +173,7 @@ header.logo_and_nav nav.pages ul.mainpages li.Home ul.homemenu {
     opacity: 0;
     box-shadow: 0 10px 20px rgba(0,0,0,0.3);
     align-content: center;
-    
-    
+    transition: transform 0.3s, opacity 0.3s;
 }
 header.logo_and_nav nav.pages ul.mainpages li.Home ul.homemenu li a p{
     display: flex;
@@ -554,15 +554,16 @@ header.logo_and_nav div.icons a.user{
     display: none;
  }
  header.logo_and_nav div.icons a.join{ 
-    background-color: #D85151;
-    transition: background-color 0.5s;
+    background-color: #d85151;
+    transition: filter 0.5s ease;
     padding: 10px 15px;
     color: white;
     border: 2px;
     border-radius: 10px;
+    filter: brightness(1);
 }
 header.logo_and_nav div.icons a.join:hover{
-    background-color: #c92d2d;
+    filter: brightness(0.85);
   
 }    
  
@@ -648,18 +649,19 @@ main .section1 .form form input:focus{
 main .section1 .form form input.button{
     width: 15%;
     color: white;
-    background-color: #D85151;
-    transition: background-color 0.3s ease;
+    background-color: #d85151;
+    transition: filter 0.3s ease;
     cursor: pointer;
     border: 2px;
     border-radius: 8px;
+    filter: brightness(1);
 }
 main .section1 .form form input.button[value]{
     font-size: 16px;
     font-weight: 500;
 }
 main .section1 .form form input.button:hover{
-    background-color: #c92d2d;
+    filter: brightness(0.85);
     
 }
 main .section1 .form form input.search2 {
@@ -1034,6 +1036,7 @@ section.section2 div.elements a p{
     flex-direction: row;
 
     justify-content: space-between;
+    gap: 10px;
 }
 .section4 div.elements a{
     
@@ -1111,54 +1114,48 @@ section.section2 div.elements a p{
 .section4 div.elements a div.photo1{
     background-image: url( ../imgs/popularprojects01.jpg);
     background-repeat: no-repeat;
+     background-size: 100%;
   
-    width: 430px;
-    height: 290px;
     position: relative;
     border-radius: 10px;
     transition: background-size 0.5s ease;
-    background-position: center;
+    background-position: center center;
 
     min-width: 135px;
     min-height: 150px;
-    
-    background-size:440px;
+    aspect-ratio: 43 / 29; 
+   
 }
 
 .section4 div.elements a div.photo2{
     background-image: url( ../imgs/popularprojects02.jpg);
 
-     background-repeat: no-repeat;
-
-    width: 430px;
-    height: 290px;
+       background-repeat: no-repeat;
+     background-size: 100%;
+  
     position: relative;
-     border-radius: 10px;
-     transition: background-size 0.5s ease;
-    background-position: center;
-    padding: 0px;
+    border-radius: 10px;
+    transition: background-size 0.5s ease;
+    background-position: center center;
 
-        min-width: 135px;
+    min-width: 135px;
     min-height: 150px;
-    
-    background-size:440px;
+    aspect-ratio: 43 / 29; 
 }
 .section4 div.elements a div.photo3{
    
     background-image: url( ../imgs/popularprojects03.jpg);
-     background-repeat: no-repeat;
-
-    width: 430px;
-    height: 290px;
+        background-repeat: no-repeat;
+     background-size: 100%;
+  
     position: relative;
-     border-radius: 10px;
+    border-radius: 10px;
     transition: background-size 0.5s ease;
-    background-position: center;
+    background-position: center center;
 
-        min-width: 135px;
+    min-width: 135px;
     min-height: 150px;
-    
-    background-size:440px;
+    aspect-ratio: 43 / 29; 
 }
 .section4 div.elements a>div>.filter{
     position: absolute;
@@ -1192,8 +1189,8 @@ section.section2 div.elements a p{
     transition: opacity 0.5s ease-in-out;
     
 }
-.section4 div.elements a:hover>div{
-    background-size: 450px;
+.section4 div.elements a:hover div.photo{
+    background-size: 120%;
 
 }
 
@@ -1434,11 +1431,12 @@ section.section2 div.elements a p{
     color: white;
 }
 .section7>div.left>div.buttons>a.b1{
-    background-color: #D85151;
-    transition: background-color 0.5s ease;
+    background-color: #d85151;
+    transition: filter 0.5s ease;
+    filter: brightness(1);
 }
 .section7>div.left>div.buttons>a.b1:hover{
-    background-color:#c92d2d;
+    filter: brightness(0.85);
 
 }
 
@@ -1799,16 +1797,17 @@ footer div.subs div.icon i {
 }
 footer div.subs div.icon h3{
     padding: 10px 25px;
-    background-color: #D85151;
-    transition: background-color 0.5s ease;
+    background-color: #d85151;
+    transition: filter 0.5s ease;
     cursor: pointer;
     font-size: 15px;
     font-weight: 500;
     border-radius: 10px;
     margin-left: 10px;
+    filter: brightness(1);
 }
 footer div.subs div.icon h3:hover{
-    background-color: #c92d2d;
+    filter: brightness(0.85);
 }
 footer div.subs div.help{
     display: flex;
@@ -2057,6 +2056,9 @@ border-radius: 7px;
     .section3 div.local div.home img{
         width: 340px;
     }
+        .section4 div.elements a>div.photo>div.content p{
+        font-size: 17px;
+    }
 }
 @media screen and (max-width: 991px) {
     header div.logo{
@@ -2279,6 +2281,9 @@ main section.section1 div.form header h1{
     font-size: 15px;
 
 }
+    .section4 div.elements a>div.photo>div.content p{
+        font-size: 21px;
+    }
 .section5>header>h1{
     font-size: 20px;
 }

@@ -82,13 +82,48 @@
             }
         });
 
-        light.appendChild(check);
-        document.querySelector("[href*='style']").setAttribute("href","css/stylelight.css");
-        var imgs = document.querySelectorAll(".trans");
-        for(var img of imgs){
-            img.src = img.src.replace('-dark.jpg', '-light.jpg');
+
+        /////////////////////
+        var yourtheme=localStorage.getItem("theme");
+        if(yourtheme==="dark"){
+            dark.appendChild(check);
+            document.querySelector("[href*='style']").setAttribute("href","css/styledark.css");
+            var imgs = document.querySelectorAll(".trans");
+            for(var img of imgs){
+                img.src = img.src.replace('-light.jpg', '-dark.jpg');
+            }
+            toggledicon.className = "toggledicon";
+
+            toggledicon.classList.add("fa-solid","fa-moon");
+            toggleEl.style.display = "none";
+        }else if(yourtheme==="auto"){
+             auto.appendChild(check);
+            document.querySelector("[href*='style']").setAttribute("href","css/styledark.css");
+            var imgs = document.querySelectorAll(".trans");
+            for(var img of imgs){
+                img.src = img.src.replace('-light.jpg', '-dark.jpg');
+            }
+            toggledicon.className = "toggledicon";
+
+            toggledicon.classList.add("fa-solid", "fa-circle-half-stroke");
+            toggleEl.style.display = "none";
+
+        }else {
+            light.appendChild(check);
+            document.querySelector("[href*='style']").setAttribute("href","css/stylelight.css");
+            var imgs = document.querySelectorAll(".trans");
+            for(var img of imgs){
+                img.src = img.src.replace('-dark.jpg', '-light.jpg');
+            }
+            toggledicon.className = "toggledicon";
+            toggledicon.classList.add("fa-regular","fa-sun");
+            toggleEl.style.display = "none";
+       
         }
 
+        
+        
+        /////////////////////
 
 
 
@@ -104,6 +139,7 @@
 
             toggledicon.classList.add("fa-regular","fa-sun");
             toggleEl.style.display = "none";
+            localStorage.setItem("theme","light");
 
         });
 
@@ -118,6 +154,8 @@
 
             toggledicon.classList.add("fa-solid","fa-moon");
             toggleEl.style.display = "none";
+            localStorage.setItem("theme","dark");
+
 
         });
         auto.addEventListener("click",function(){
@@ -131,7 +169,7 @@
 
             toggledicon.classList.add("fa-solid", "fa-circle-half-stroke");
             toggleEl.style.display = "none";
-
+            localStorage.setItem("theme","auto");
         });
             
 
@@ -167,6 +205,23 @@
         });
         toggle2();
 
-      
+
+        var elementsChangeColor=document.getElementsByClassName("change");
+        var color =document.getElementById("colorpanel");
+
+        function colorchange(){
+            var colorValue=localStorage.getItem("buttonColor");
+            for(var element of elementsChangeColor){
+                element.style.backgroundColor=colorValue;
+                console.log(colorValue);
+            }
+        }
+        colorchange();
+        color.addEventListener("input",function(){
+            
+            localStorage.setItem("buttonColor",color.value);
+            colorchange();
+        });
+
 
             
